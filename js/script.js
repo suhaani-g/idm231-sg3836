@@ -16,13 +16,14 @@ const catBreedsAsZodiacSigns = [
 
 var zodiacIndex=0;
 var imageName="";
+var sound;
 const date1=document.querySelector('.date1');
 const middleImage=document.querySelector('.middleimage');
 const dateButton=document.querySelector('.submiticon');
 var catName=document.querySelector('.text-wrapper-11');
 const pageDiv=document.querySelector('.pagediv');
 const images = document.querySelectorAll('.image');
-console.log(images);
+
 images.forEach(image => {
     image.addEventListener('click', handleImageClicks);
 });
@@ -30,6 +31,7 @@ images.forEach(image => {
 
 dateButton.addEventListener('click',function(event){
 
+  if(date1.value){
     const birthdate = date1.value;
     const date = new Date(birthdate);
     var month = date.getMonth() + 1; 
@@ -38,73 +40,98 @@ dateButton.addEventListener('click',function(event){
     catName.innerHTML = catBreedByZodiac(zodiacSign);
     document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[zodiacIndex];
     middleImage.src="img/"+imageName;
-    
+    sound.play();
+  }
 });
 
 function handleImageClicks(event) {
     
     imageName=event.target.src;
-    
+    var sound;
     switch (event.target.id){
-        case "bangal":
+        case "bengal":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[0];
             middleImage.src=imageName;
             catName.innerHTML = "Bengal";
+            sound = document.getElementById('sbengal');
+            sound.play();
             break;
         case "british":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[1];
             middleImage.src=imageName;
             catName.innerHTML ="British Shorthair" ;
+            sound = document.getElementById('sbritish');
+            sound.play();
             break;            
         case "spyhnx":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[2];
             middleImage.src=imageName;
             catName.innerHTML="Spyhnx";
+            sound = document.getElementById('sspyhnx');
+            sound.play();
             break;
         case "ragdoll":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[3];
             middleImage.src=imageName;
             catName.innerHTML="RagDoll";
+            sound = document.getElementById('mragdoll');
+            sound.play();
             break;
         case "maine":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[4];
             middleImage.src=imageName;
             catName.innerHTML="Maine Doll";
+            sound = document.getElementById('smaine');
+            sound.play();
             break;
         case "siamese":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[5];
             middleImage.src=imageName;
             catName.innerHTML="Siamese";
+            sound = document.getElementById('ssiamese');
+            sound.play();
             break;
         case "persian":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[6];
             middleImage.src=imageName;
             catName.innerHTML="Persian";
+            sound = document.getElementById('spersian');
+            sound.play();
             break;            
         case "bombay":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[7];
             middleImage.src=imageName;
             catName.innerHTML="Bombay";
+            sound = document.getElementById('sbombay');
+            sound.play();
             break;
         case "abyssinian":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[8];
             middleImage.src=imageName;
             catName.innerHTML="Abyssinian";
+            sound = document.getElementById('sabyssinian');
+            sound.play();
             break;
         case "scottish":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[9];
             middleImage.src=imageName;
             catName.innerHTML="Scottish Fold";
+            sound = document.getElementById('sscottish');
+            sound.play();
             break;
         case "devon":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[10];
             middleImage.src=imageName;
             catName.innerHTML="Devon Rex";
+            sound = document.getElementById('sdevon');
+            sound.play();
             break;
         case "turkish":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[11];
             middleImage.src=imageName;
             catName.innerHTML="Turkish Van";
+            sound = document.getElementById('sturkish');
+            sound.play();
             break;
                     
                             
@@ -132,51 +159,64 @@ function catBreedByZodiac(zodiac) {
     switch (zodiac) {
         case "Aries":
             zodiacIndex=0;
-            imageName="bengal.jpg";
+            imageName="bengal.png";
+            sound = document.getElementById('sbengal')
             return "Bengal";
         case "Taurus":
             zodiacIndex=1;
-            imageName="british.jpg";
+            imageName="british.png";
+            sound = document.getElementById('sbritish')
             return "British Shorthair";
         case "Gemini":
             zodiacIndex=2;
-            imageName="spyhnx.jpg";
+            imageName="sphynx.png";
+            sound = document.getElementById('sspyhnx')
             return "Spyhnx";          
         case "Cancer":
             zodiacIndex=3
-            imageName="ragdoll.jpg";
+            imageName="ragdoll.png";
+            sound = document.getElementById('mragdoll')
             return "Ragdoll";
         case "Leo":
             zodiacIndex=4
-            imageName="maine.jpg";
+            imageName="maine.png";
+            sound = document.getElementById('smaine')
             return "Maine Coon";
         case "Virgo":
             zodiacIndex=5;
-            imageName="Siamese.jpg";
+            imageName="siamese.png";
+            sound = document.getElementById('ssiamese')
             return "Siamese";
+           
         case "Libra":
             zodiacIndex=6;
-            imageName="persian.jpg";
+            imageName="persian.png";
+            sound = document.getElementById('spersian')
             return "Persian";
         case "Scorpio":
             zodiacIndex=7;
-            imageName="Bombay.jpg";
+            imageName="Bombay.png";
+            sound = document.getElementById('sbombay')
             return "Bombay";
         case "Sagittarius":
             zodiacIndex=8;
-            imageName="abyssinian.jpg";
+            imageName="abyssinian.png";
+            sound = document.getElementById('sabyssinian')
             return "Abyssinian";
         case "Capricorn":
             zodiacIndex=9;
-            imageName="scottish.jpg";
+            imageName="scottish.png";
+            sound = document.getElementById('sscottish')
             return "Scottish Fold";
         case "Aquarius":
             zodiacIndex=10;
-            imageName="devon.jpg";
+            imageName="devon.png";
+            sound = document.getElementById('sdevon')
             return "Devon Rex";
         case "Pisces":
             zodiacIndex=11;
-            imageName="turkish.jpg";
+            imageName="turkish.png";
+            sound = document.getElementById('sturkish')
             return "Turkish Van";
         default:
             return "Unknown";

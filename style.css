@@ -14,7 +14,7 @@ header{
   align-items: center; 
   padding: 0 10px;
   margin-bottom: 100px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 header .your-birthday, header .your-catbreed {
@@ -31,7 +31,7 @@ header .your-birthday, header .your-catbreed {
   margin-left: auto;
   margin-right: 0;
   height: 50px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 20px;
 }
 

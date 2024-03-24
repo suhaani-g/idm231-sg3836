@@ -90,7 +90,7 @@ function handleImageClicks(event) {
         case "maine":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[4];
             middleImage.src=imageName;
-            catName.innerHTML="Maine Doll";
+            catName.innerHTML="Maine Coon";
             sound = document.getElementById('smaine');
             sound.play();
             break;

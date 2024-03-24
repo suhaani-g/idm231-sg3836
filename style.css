@@ -125,11 +125,14 @@ header .your-birthday, header .your-catbreed {
   border: 1px solid black;
   border-radius: 10%;
   transition: opacity 0.5s;
+  transition: transform 0.5s ease;
 }
 
 .cat-groups img:hover, .cat-groups2 img:hover {
   opacity: 0.3; 
   background: rgba(0, 0, 0, 0.5); 
+  cursor:pointer;
+  transform: translateY(-10px);
 }
 
 .cat-text {

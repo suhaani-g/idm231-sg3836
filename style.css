@@ -1,5 +1,6 @@
 body {
   font-family: 'Cutive Mono';
+  background-color: #e6e6e6;
 }
 
 header .text-container {
@@ -79,6 +80,21 @@ header .your-birthday, header .your-catbreed {
   
 }
 
+.DOB{
+  height: 30px;
+  width: 300px;
+  border-radius: 40%;
+  
+}
+
+
+.submiticon{
+  margin:10px;
+  height: 30px;
+  background-color: #212121;
+  color:#e6e6e6;
+}
+
 .welcome-title{
   text-align: center;
   font-size: 25px;
@@ -100,6 +116,20 @@ header .your-birthday, header .your-catbreed {
   margin-bottom: 10px;
   border: 1px solid black;
   border-radius: 10%;
+}
+
+.cat-groups img, .cat-groups2 img {
+  height: 120px;
+  width: auto;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10%;
+  transition: opacity 0.5s;
+}
+
+.cat-groups img:hover, .cat-groups2 img:hover {
+  opacity: 0.3; 
+  background: rgba(0, 0, 0, 0.5); 
 }
 
 .cat-text {

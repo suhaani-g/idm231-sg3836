@@ -1,0 +1,138 @@
+body {
+  font-family: 'Cutive Mono';
+}
+
+header .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header{
+  font-size: 36px;
+  margin: 30px;
+  display: flex;
+  align-items: center; 
+  padding: 0 10px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+header .your-birthday, header .your-catbreed {
+  flex: 1;
+}
+
+.lucide-cat {
+  flex-shrink: 0;
+}
+
+.question2 {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+  height: 50px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.lucide-cat{
+  margin-left: 10px;
+  align-self: center;
+}
+
+
+.cat-groups img {
+  height: 120px;
+  width: auto;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+.cat-groups2 img {
+  height: 120px;
+  width: auto;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+.cat-text {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cat-groups-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; 
+  max-width: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+
+.middleimage{
+  width: auto;
+  height: 240px;
+  margin: 40px;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+.birthday{
+  line-height: 30px;
+  justify-self: center;
+}
+
+.cat-groups, .cat-groups2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  
+}
+
+.cat-groups{
+  margin-left: 120px;
+}
+
+.cat-groups2{
+  margin-right: 120px;
+}
+
+.cat-groups div, .cat-groups2 div {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .cat-groups, .cat-groups2 {
+      grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .cat-groups-container {
+      flex-direction: column;
+  }
+
+  .cat-groups, .cat-groups2 {
+      width: 100%;
+      grid-template-columns: 1fr;
+      align-items: center;
+      margin: 0;
+  }
+}

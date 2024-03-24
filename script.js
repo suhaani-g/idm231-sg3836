@@ -20,9 +20,9 @@ var sound;
 const date1=document.querySelector('.date1');
 const middleImage=document.querySelector('.middleimage');
 const dateButton=document.querySelector('.submiticon');
-var catName=document.querySelector('.text-wrapper-11');
+var catName=document.querySelector('.welcome-title');
 const pageDiv=document.querySelector('.pagediv');
-const images = document.querySelectorAll('.image');
+const images = document.querySelectorAll('.image2');
 
 images.forEach(image => {
     image.addEventListener('click', handleImageClicks);
@@ -53,6 +53,7 @@ function handleImageClicks(event) {
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[0];
             middleImage.src=imageName;
             catName.innerHTML = "Bengal";
+            console.log(catName.innerHTML)
             sound = document.getElementById('sbengal');
             sound.play();
             break;

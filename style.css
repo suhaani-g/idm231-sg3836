@@ -3,7 +3,6 @@
 body {
   font-family: 'Cutive Mono';
   background-color: #e6e6e6;
-  margin-bottom: 50px;
 }
 
 /* Header */
@@ -19,8 +18,9 @@ header{
   display: flex;
   align-items: center; 
   padding: 0 10px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   margin-top: 30px;
+  width: 40%;
 }
 
 header .your-birthday, header .your-catbreed {
@@ -109,6 +109,7 @@ header .your-birthday, header .your-catbreed {
 }
 .typebirth{
   font-size: 26px;
+  margin-top: 0;
   margin: 20px;
   display: flex;
   justify-content: center;

@@ -1,4 +1,6 @@
 
+/* Array to store descriptions of the 12 cat breed */
+
 const catBreedsAsZodiacSigns = [
     "Aries: Bengal - Bengals are energetic, adventurous, and bold, much like the pioneering spirit of Aries. They love to play and explore, embodying the dynamic and courageous nature of this fire sign.",
     "Taurus: British Shorthair - Known for their calm and relaxed demeanor, British Shorthairs are the perfect match for the stable and comfort-loving Taurus. They enjoy the finer things in life, such as cozy naps and being pampered.",
@@ -14,24 +16,28 @@ const catBreedsAsZodiacSigns = [
     "Pisces: Turkish Angora - The intuitive and sensitive Turkish Angora, with its graceful appearance and empathetic nature, reflects the imaginative and compassionate Pisces. They are often seen as mystical and enchanting."
     ];
 
+
 var zodiacIndex=0;
 var imageName="";
-var sound;
-const date1=document.querySelector('.date1');
-const middleImage=document.querySelector('.middleimage');
-const dateButton=document.querySelector('.submiticon');
-var catName=document.querySelector('.welcome-title');
-const pageDiv=document.querySelector('.pagediv');
-const images = document.querySelectorAll('.image2');
+var sound;     /* To map audio tag from html document */
+const date1=document.querySelector('.date1');       /* To map date control from html document */
+const middleImage=document.querySelector('.middleimage');   /* To map middle image tag from html document */
+const dateButton=document.querySelector('.submiticon');     /* To map button controlfrom html document */
+var catName=document.querySelector('.welcome-title');       /* To map welcome text tag from html document */          
+const images = document.querySelectorAll('.image2');        /* To map 12 cat images tags from html document */
+
+
+/* Attaching click event to all cat images */
 
 images.forEach(image => {
     image.addEventListener('click', handleImageClicks);
 });
 
+/* Attaching click event on the date button */
 
 dateButton.addEventListener('click',function(event){
 
-  if(date1.value){
+if(date1.value){
     const birthdate = date1.value;
     const date = new Date(birthdate);
     var month = date.getMonth() + 1; 
@@ -41,13 +47,16 @@ dateButton.addEventListener('click',function(event){
     document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[zodiacIndex];
     middleImage.src="img/"+imageName;
     sound.play();
-  }
+
+}
 });
+
+/* Handling click event on 12 cat images */
 
 function handleImageClicks(event) {
     
     imageName=event.target.src;
-    var sound;
+    
     switch (event.target.id){
         case "bengal":
             document.querySelector(".desc").textContent=catBreedsAsZodiacSigns[0];
@@ -140,6 +149,8 @@ function handleImageClicks(event) {
 
 }
 
+/* Function to identify zodaic based on the day and month */
+
 function getZodiacSign(month, day) {
     if ((month == 1 && day <= 20) || (month == 12 && day >= 22)) return 'Capricorn';
     if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) return 'Aquarius';
@@ -154,6 +165,8 @@ function getZodiacSign(month, day) {
     if ((month == 10 && day >= 24) || (month == 11 && day <= 22)) return 'Scorpio';
     if ((month == 11 && day >= 23) || (month == 12 && day <= 21)) return 'Sagittarius';
 }
+
+/* Identifying the Cat types from the zodiac */
 
 
 function catBreedByZodiac(zodiac) {
@@ -188,7 +201,6 @@ function catBreedByZodiac(zodiac) {
             imageName="siamese.png";
             sound = document.getElementById('ssiamese')
             return "Siamese";
-           
         case "Libra":
             zodiacIndex=6;
             imageName="persian.png";

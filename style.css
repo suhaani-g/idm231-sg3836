@@ -13,7 +13,7 @@ header{
   display: flex;
   align-items: center; 
   padding: 0 10px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   margin-top: 40px;
 }
 
@@ -40,6 +40,51 @@ header .your-birthday, header .your-catbreed {
   align-self: center;
 }
 
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; 
+  max-width: 350px;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+.birthday{
+  display: flex;
+  flex-direction:column;
+}
+.typebirth{
+  font-size: 23px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.middleimage{
+  width: auto;
+  height: 240px;
+  margin: 40px;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+.DOB, .submiticon{
+  display: flex;
+  line-height: 30px;
+  justify-content: center;
+  align-self: center;
+  
+}
+
+.welcome-title{
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
 
 .cat-groups img {
   height: 120px;
@@ -70,30 +115,6 @@ header .your-birthday, header .your-catbreed {
   
 }
 
-.middle-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px; 
-  max-width: 300px;
-  margin-left: 50px;
-  margin-right: 50px;
-  
-}
-
-.middleimage{
-  width: auto;
-  height: 240px;
-  margin: 40px;
-  border: 1px solid black;
-  border-radius: 10%;
-}
-
-.birthday{
-  line-height: 30px;
-  justify-self: center;
-}
 
 .cat-groups, .cat-groups2 {
   display: grid;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
   font-family: 'Cutive Mono';
   background-color: #e6e6e6;
@@ -26,7 +28,44 @@ header .your-birthday, header .your-catbreed {
   flex-shrink: 0;
 }
 
-.question2 {
+.question-container {
+  position: fixed; 
+  right: 20px; 
+  bottom: 20px; 
+  display: inline-block;
+  z-index: 1000; 
+}
+
+.popup-message {
+  display: none; 
+  position: absolute;
+  right: 0; 
+  bottom: 100%; 
+  margin-bottom: 5px;
+  width: 350px;
+  padding: 20px;
+  background-color: #212121;
+  color:#e6e6e6;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 300;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
+
+.popup-message li{
+  margin-bottom: 15px;
+}
+
+.popup-message ol{
+  padding: 10px;;
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+
+.question-mark {
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
@@ -34,6 +73,12 @@ header .your-birthday, header .your-catbreed {
   height: 50px;
   margin-top: 10px;
   margin-right: 20px;
+  transition: transform 0.5s ease;
+}
+
+.question-container img:hover {
+  cursor:pointer;
+  transform: translateY(-10px);
 }
 
 .lucide-cat{

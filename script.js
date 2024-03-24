@@ -236,4 +236,20 @@ function catBreedByZodiac(zodiac) {
     }
 }
 
+// Pop Up Info
+
+const questionMarkImage = document.getElementById('questionMarkImage');
+const popupMessage = document.getElementById('popupMessage');
+
+questionMarkImage.addEventListener('click', function() {
+
+    popupMessage.style.display = popupMessage.style.display === 'block' ? 'none' : 'block';
+});
+
+
+window.addEventListener('click', function(event) {
+    if (event.target !== questionMarkImage && popupMessage.style.display === 'block') {
+    popupMessage.style.display = 'none';
+}
+});
 

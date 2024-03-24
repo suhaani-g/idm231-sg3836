@@ -6,6 +6,8 @@ body {
   margin-bottom: 50px;
 }
 
+/* Header */
+
 header .text-container {
   display: flex;
   flex-direction: column;
@@ -17,8 +19,8 @@ header{
   display: flex;
   align-items: center; 
   padding: 0 10px;
-  margin-bottom: 60px;
-  margin-top: 40px;
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
 
 header .your-birthday, header .your-catbreed {
@@ -29,6 +31,7 @@ header .your-birthday, header .your-catbreed {
   flex-shrink: 0;
 }
 
+/* Question Pop Up */
 .question-container {
   position: fixed; 
   right: 20px; 
@@ -86,6 +89,8 @@ header .your-birthday, header .your-catbreed {
   margin-left: 10px;
   align-self: center;
 }
+
+/* Middle Section, DOB, Image, Desc */
 
 .middle-section {
   display: flex;
@@ -172,6 +177,8 @@ input{
   color: #e6e6e6;
   padding: 5px;
 }
+
+/* Cat Images and Text */
 
 .cat-groups img {
   height: 120px;

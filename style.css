@@ -102,7 +102,7 @@ header .your-birthday, header .your-catbreed {
   flex-direction:column;
 }
 .typebirth{
-  font-size: 23px;
+  font-size: 26px;
   margin: 20px;
   display: flex;
   justify-content: center;
@@ -125,11 +125,12 @@ header .your-birthday, header .your-catbreed {
   
 }
 
-.DOB{
+input{
+  margin:10px;
   height: 30px;
-  width: 300px;
-  border-radius: 40%;
-  
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #212121 ;
 }
 
 
@@ -138,6 +139,22 @@ header .your-birthday, header .your-catbreed {
   height: 30px;
   background-color: #212121;
   color:#e6e6e6;
+  text-align: center;
+  font-size: 18px;
+  font-family: Cutive Mono;
+  border-radius: 30%;
+  transition: opacity 0.5s;
+  transition: transform 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.submiticon:hover{
+  opacity: 0.5; 
+  background: rgba(0, 0, 0, 0.5); 
+  cursor:pointer;
+  transform: translateY(-10px);
+  
 }
 
 .welcome-title{

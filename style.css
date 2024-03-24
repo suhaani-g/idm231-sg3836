@@ -3,6 +3,7 @@
 body {
   font-family: 'Cutive Mono';
   background-color: #e6e6e6;
+  margin-bottom: 50px;
 }
 
 header .text-container {
@@ -16,7 +17,7 @@ header{
   display: flex;
   align-items: center; 
   padding: 0 10px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   margin-top: 40px;
 }
 
@@ -117,6 +118,11 @@ header .your-birthday, header .your-catbreed {
   border-radius: 10%;
 }
 
+.desc{
+  margin-bottom: 30px;
+  border: 1px solid #212121;
+  padding: 20px;
+}
 .DOB, .submiticon{
   display: flex;
   line-height: 30px;
@@ -160,8 +166,11 @@ input{
 .welcome-title{
   text-align: center;
   font-size: 25px;
-  border: 1px solid black;
+  border: 1px solid #e6e6e6;
   margin-bottom: 20px;
+  background-color: #3e3e3e;
+  color: #e6e6e6;
+  padding: 5px;
 }
 
 .cat-groups img {
